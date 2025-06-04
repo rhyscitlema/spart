@@ -1,0 +1,35 @@
+/*!
+ * Spart.css - SPA Art
+ * Support for Spart.js,
+ * a lightweight raw JavaScript library for building web user interfaces.
+ *
+ * (c) 2025 Rhyscitlema
+ * Released under the MIT License
+ */
+
+#toast-container {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10000;
+	pointer-events: none;
+}
+
+.toast-message {
+	margin-bottom: 10px;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.toast-message span {
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 12px 20px;
+	border-radius: 6px;
+	font-size: 14px;
+	max-width: 400px;
+	pointer-events: auto;
+}
