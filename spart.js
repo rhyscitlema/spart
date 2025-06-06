@@ -126,7 +126,7 @@ const toastItems = {};
  * Clears a toast message by its ID obtained from toast().
  * @param {number} id
  */
-function toast_clear(id) {
+function removeToast(id) {
 	const item = toastItems[id];
 	if (!item) return;
 	item.style.opacity = '0';
@@ -164,7 +164,7 @@ function toast(message, forLong) {
 	// Auto-dismiss after timeout
 	const timeout = forLong ? 6000 : 3000;
 
-	const id = setTimeout(() => toast_clear(id), timeout);
+	const id = setTimeout(() => removeToast(id), timeout);
 	toastItems[id] = item;
 	return id;
 }
